@@ -72,7 +72,11 @@
         <div class="about-image-wrap">
           <div class="about-image-frame">
             <div class="about-image-placeholder">
-  <img src="images/profile.jpg" alt="Saurabh" />
+  <img
+  src="images/profile.jpg"
+  alt="Saurabh"
+  loading="lazy"
+/>
 </div>
             
           </div>
@@ -86,7 +90,15 @@
             I believe great software is a blend of technical precision and thoughtful design. When I'm not coding, you'll find me reading about emerging tech, contributing to open source, or exploring new design trends.
           </p>
           
-          <a href="resume.pdf" class="btn btn-primary" download>Download Resume</a>
+          <div class="resume-buttons">
+  <a href="resume.pdf" class="btn btn-primary" download>
+    Download Resume
+  </a>
+
+  <button class="btn btn-ghost" id="openResume">
+    Preview Resume
+  </button>
+</div>
         </div>
       </div>
     </div>
@@ -119,7 +131,7 @@
       </div>
 
       <div class="skill-block">
-        <h3>🌐 Web Technologies</h3>
+        <h3>🌐 Frontend</h3>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
@@ -233,80 +245,274 @@
   </section>
 
   <section class="section projects" id="projects">
-    <div class="container">
-      <div class="section-label">
-        <span class="label-line"></span>
-        <span class="label-text">04 / Projects</span>
+  <div class="container">
+
+    <div class="section-label">
+      <span class="label-line"></span>
+      <span class="label-text">04 / Projects</span>
+    </div>
+
+    <h2 class="section-title center">Selected <em>Works</em></h2>
+
+    <p class="section-sub center">
+      A curated collection of things I've built
+    </p>
+
+    <div class="projects-grid">
+
+      <!-- LIFTSY -->
+      <div class="project-card featured-project" data-category="ai">
+
+        <div class="project-image">
+  <img
+    src="images/Liftsy.png"
+    alt="Liftsy AI Fitness Platform"
+    loading="lazy"
+  />
+</div>
+
+        <div class="project-content">
+
+          <div class="project-meta">
+            <!-- <span class="project-year">2026</span> -->
+            <span class="project-type">AI + Full Stack</span>
+          </div>
+
+          <h3 class="project-title">
+            Liftsy — AI Fitness Social Platform
+          </h3>
+
+          <p class="project-desc">
+            AI-powered MERN fitness platform with live workout tracking,
+            GPT-based coaching, analytics dashboards, leaderboard systems,
+            and social engagement features.
+          </p>
+
+          <div class="project-tech">
+            <span>MERN</span>
+            <span>MongoDB</span>
+            <span>JWT</span>
+            <span>Groq AI</span>
+            <span>Chart.js</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://liftsy.vercel.app/" class="project-link">
+              Live Demo ↗
+            </a>
+
+            <a href="https://github.com/Saurabh20-05/Liftsy" class="project-link ghost">
+              GitHub ↗
+            </a>
+          </div>
+
+        </div>
       </div>
-      <h2 class="section-title center">Selected <em>Works</em></h2>
-      <p class="section-sub center">A curated collection of things I've built</p>
+
+      <!-- KLUTCH -->
+      <div class="project-card" data-category="web">
+
+        <div class="project-image">
+  <img
+    src="images/Klutch.png"
+    alt="Klutch E-Commerce Platform"
+    loading="lazy"
+  />
+</div>
+
+        <div class="project-content">
+
+          <div class="project-meta">
+            <!-- <span class="project-year">2025</span> -->
+            <span class="project-type">Full Stack</span>
+          </div>
+
+          <h3 class="project-title">
+            Klutch — Multi-Vendor E-Commerce Platform
+          </h3>
+
+          <p class="project-desc">
+            Production-ready MERN e-commerce platform with vendor workflows,
+            JWT authentication, protected routes, order management,
+            reviews, returns, and admin systems.
+          </p>
+
+          <div class="project-tech">
+            <span>MERN</span>
+            <span>JWT</span>
+            <span>REST APIs</span>
+            <span>MongoDB</span>
+            <span>Node.js</span>
+            <span>React</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://klutch-ecommerce.vercel.app/" class="project-link">
+              Live Demo ↗
+            </a>
+
+            <a href="https://github.com/Saurabh20-05/Klutch-Ecommerce" class="project-link ghost">
+              GitHub ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- AI ACCESSIBILITY -->
+      <div class="project-card" data-category="ai">
+
+        <div class="project-image">
+  <img
+    src="images/access.png"
+    alt="AI Accessibility Platform"
+    loading="lazy"
+  />
+</div>
+
+        <div class="project-content">
+
+          <div class="project-meta">
+            <!-- <span class="project-year">2025</span> -->
+            <span class="project-type">AI / Computer Vision</span>
+          </div>
+
+          <h3 class="project-title">
+            AI Accessibility Platform
+          </h3>
+
+          <p class="project-desc">
+            AI-driven accessibility analysis platform for WCAG compliance,
+            color-blindness simulation, visual filters, contrast evaluation,
+            and intelligent accessibility scoring.
+          </p>
+
+          <div class="project-tech">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>OpenCV</span>
+            <span>React</span>
+            <span>MongoDB</span>
+            <span>NumPy</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Saurabh20-05/AI-Accessibility-Platform-" class="project-link">
+              Live Demo ↗
+            </a>
+
+            <a href="https://github.com/Saurabh20-05/AI-Accessibility-Platform-" class="project-link ghost">
+              GitHub ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
 
       
 
-      <div class="projects-grid">
+      <!-- GOALTRACKER -->
+      <div class="project-card" data-category="fullstack">
 
-  <div class="project-card" data-category="web">
-    <div class="project-image">
-      <div class="project-img-placeholder" style="--hue:210">K</div>
-    </div>
-    <div class="project-content">
-      <div class="project-meta">
-        <span class="project-year">2025</span>
-        <span class="project-type">Full Stack</span>
-      </div>
-
-      <h3 class="project-title">
-        Klutch – Multi-Vendor E-Commerce Platform
-      </h3>
-
-      <p class="project-desc">
-        Built a production-ready multi-vendor e-commerce platform using MERN with role-based authentication.
-        Implemented JWT authentication, protected routes, vendor ownership, cart & order system, reviews, and return workflows.
-      </p>
-
-      <div class="project-tech">
-        <span>MERN</span><span>JWT</span><span>REST APIs</span><span>MongoDB</span><span>Node.js</span><span>React</span>
-      </div>
-
-      <div class="project-links">
-        <a href="https://klutch-ecommerce.vercel.app/" class="project-link">Live Demo ↗</a>
-        <a href="https://github.com/Saurabh20-05/Klutch-Ecommerce" class="project-link ghost">GitHub ↗</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="project-card" data-category="app">
-    <div class="project-image">
-      <div class="project-img-placeholder" style="--hue:160">AI</div>
-    </div>
-    <div class="project-content">
-      <div class="project-meta">
-        <span class="project-year">2025</span>
-        <span class="project-type">AI / ML</span>
-      </div>
-
-      <h3 class="project-title">AI Accessibility Platform</h3>
-
-      <p class="project-desc">
-        Built an AI-powered accessibility platform for WCAG compliance and color-blindness simulation.
-        Implemented image processing, contrast evaluation, and automated accessibility checks.
-      </p>
-
-      <div class="project-tech">
-        <span>Python</span><span>FastAPI</span><span>OpenCV</span><span>NumPy</span><span>React</span><span>MongoDB</span>
-      </div>
-
-      <div class="project-links">
-        <a href="#" class="project-link">Live Demo ↗</a>
-        <a href="https://github.com/Saurabh20-05/AI-Accessibility-Platform-" class="project-link ghost">GitHub ↗</a>
-      </div>
-    </div>
-  </div>
-
+        <div class="project-image">
+  <img
+    src="images/Goal.png"
+    alt="GoalTracker Portal"
+    loading="lazy"
+  />
 </div>
+
+        <div class="project-content">
+
+          <div class="project-meta">
+            <!-- <span class="project-year">2025</span> -->
+            <span class="project-type">Enterprise MERN</span>
+          </div>
+
+          <h3 class="project-title">
+            GoalTracker — Performance Management Portal
+          </h3>
+
+          <p class="project-desc">
+            Enterprise-grade goal management platform with JWT authentication,
+            employee-manager-admin workflows, analytics dashboards,
+            approvals, and progress tracking systems.
+          </p>
+
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>JWT</span>
+            <span>Tailwind</span>
+            <span>Recharts</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://goal-tracker-orpin-mu.vercel.app/" class="project-link">
+              Live Demo ↗
+            </a>
+
+            <a href="https://github.com/Saurabh20-05/GoalTracker" class="project-link ghost">
+              GitHub ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <!-- INSUCARE -->
+      <!-- <div class="project-card" data-category="web">
+
+        <div class="project-image">
+          <div class="project-img-placeholder" style="--hue:20">
+            IN
+          </div>
+        </div>
+
+        <div class="project-content">
+
+          <div class="project-meta">
+            <span class="project-year">2025</span>
+            <span class="project-type">Frontend + Dashboard</span>
+          </div>
+
+          <h3 class="project-title">
+            InsuCare Pro — Insurance Enquiry Portal
+          </h3>
+
+          <p class="project-desc">
+            Modern multi-step insurance enquiry system with animated workflows,
+            admin dashboard, live validation, status management,
+            and localStorage persistence.
+          </p>
+
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>localStorage</span>
+            <span>Responsive UI</span>
+          </div>
+
+          <div class="project-links">
+            <a href="#" class="project-link">
+              Live Demo ↗
+            </a>
+
+            <a href="https://github.com/Saurabh20-05/Insurance_Enquiry_Portal" class="project-link ghost">
+              GitHub ↗
+            </a>
+          </div>
+
+        </div>
+      </div> -->
+
     </div>
-  </section>
+  </div>
+</section>
 
   
 
@@ -360,6 +566,8 @@
       <div class="contact-card">
         <form id="contactForm" class="contact-form">
 
+          <input type="text" name="website" class="hidden-field">
+
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
           <textarea name="message" placeholder="Your Message" required></textarea>
@@ -387,7 +595,24 @@
   </div>
 </footer>
 
-  <script src="js/main.js"></script>
+<div class="resume-modal" id="resumeModal">
+
+  <div class="resume-modal-content">
+
+    <button class="resume-close" id="closeResume">
+      ✕
+    </button>
+
+    <iframe
+      src="resume.pdf"
+      class="resume-frame"
+    ></iframe>
+
+  </div>
+
+</div>
+
+  <script src="js/main.js" defer></script>
 
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 

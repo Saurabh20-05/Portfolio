@@ -105,6 +105,62 @@
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+let lastSubmit = 0;
+
+form.addEventListener('submit', function(e) {
+
+  e.preventDefault();
+
+  const honeypot = form.querySelector('[name="website"]');
+
+  if (honeypot.value !== '') {
+    return;
+  }
+
+  const btn = form.querySelector('.btn-text');
+  btn.textContent = "Sending...";
+
+  const now = Date.now();
+
+  if (now - lastSubmit < 15000) {
+    status.textContent = "Please wait before sending again.";
+    return;
+  }
+
+  lastSubmit = now;
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -199,4 +255,39 @@ form.addEventListener('submit', function(e) {
     }
   `;
   document.head.appendChild(style);
+})();
+
+
+
+
+
+
+
+
+
+(function initResumeModal() {
+
+  const openBtn = document.getElementById('openResume');
+  const closeBtn = document.getElementById('closeResume');
+  const modal = document.getElementById('resumeModal');
+
+  if (!openBtn || !closeBtn || !modal) return;
+
+  openBtn.addEventListener('click', () => {
+  modal.classList.add('active');
+  document.body.classList.add('modal-open');
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+  document.body.classList.remove('modal-open');
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+  }
+});
+
 })();
